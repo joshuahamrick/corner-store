@@ -1,13 +1,13 @@
 
 namespace CornerStore.Models;
 
-public class Order
+public class OrderDTO
 {
     public int Id { get; set; }
     public int CashierId { get; set; }
-    public Cashier Cashier { get; set; } // Many-to-one relationship with Cashier
+    public CashierDTO Cashier { get; set; } // Many-to-one relationship with Cashier
     public DateTime? PaidOnDate { get; set; }
-    public List<OrderProduct> OrderProducts { get; set; } // One-to-many relationship with OrderProduct
+    public List<OrderProductDTO> OrderProducts { get; set; } // One-to-many relationship with OrderProduct
 
     // Computed property for Total
     public decimal Total
